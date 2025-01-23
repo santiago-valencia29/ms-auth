@@ -18,7 +18,7 @@ app.set("port", process.env.PORT || 3000);
 
 //middlewares
 app.use(morgan("dev"));
-app.use(cors({ origin: "http://localhost:4200" }));
+app.use(cors({ origin: ["http://localhost:4200", "https://front-end-3a3b1.web.app"] }));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(passport.initialize());
